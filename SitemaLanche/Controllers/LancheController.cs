@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using SitemaLanche.Repository;
 using Microsoft.AspNetCore.Mvc;
-using SitemaLanche.ViewModels;
 
 namespace SitemaLanche.Controllers
 {
@@ -22,13 +21,8 @@ namespace SitemaLanche.Controllers
 
         public IActionResult List()
         {
-            //var lanches = _lancheRepository.Lanches;
-            //  return View(lanches);
-
-            var lancheListViewModel = new LancheListViewModel();
-            lancheListViewModel.Lanches = _lancheRepository.Lanches;
-            lancheListViewModel.CategoriaAtual = "Categoria Atual";
-            return View(lancheListViewModel);
+            var lanches = _lancheRepository.Lanches;
+            return View(lanches);
         }
     }
 }
