@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using SitemaLanche.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using SitemaLanche.Repository;
+using SitemaLanche.ViewModels;
+
 
 namespace SitemaLanche.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IlanchesRepository _lancheRepository;
+        private readonly ILanchesRepository _lancheRepository;
 
-        public HomeController(IlanchesRepository lancheRepository)
+        public HomeController(ILanchesRepository lancheRepository)
         {
 
             _lancheRepository = lancheRepository;

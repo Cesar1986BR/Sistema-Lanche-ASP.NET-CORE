@@ -9,10 +9,10 @@ namespace SitemaLanche.Controllers
 {
     public class LancheController : Controller
     {
-        private readonly IlanchesRepository _lancheRepository;
+        private readonly ILanchesRepository _lancheRepository;
         private readonly ICategoriaRepository _categoriaRepository;
 
-        public LancheController(IlanchesRepository lancheRepository,
+        public LancheController(ILanchesRepository lancheRepository,
             ICategoriaRepository categoriaRepository)
         {
             _lancheRepository = lancheRepository;

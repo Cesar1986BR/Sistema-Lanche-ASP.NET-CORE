@@ -9,12 +9,12 @@ using SitemaLanche.ViewModels;
 
 namespace SitemaLanche.Controllers
 {
-    public class CarringoCompraController : Controller
+    public class CarrinhoCompraController : Controller
     {
-        private IlanchesRepository _lancheRepository;
+        private ILanchesRepository _lancheRepository;
         private readonly CarrinhoCompra _carrinhoCompra;
 
-        public CarringoCompraController(IlanchesRepository lancheRepository, CarrinhoCompra carrinhoCompra)
+        public CarrinhoCompraController(ILanchesRepository lancheRepository, CarrinhoCompra carrinhoCompra)
         {
             _lancheRepository = lancheRepository;
             _carrinhoCompra = carrinhoCompra;
@@ -22,15 +22,15 @@ namespace SitemaLanche.Controllers
         public IActionResult Index()
         {
             var itens = _carrinhoCompra.GetCarrinhoCompraItens();
-            _carrinhoCompra.CarrinhoCompraItems = itens;
+            _carrinhoCompra.CarrinhoCompraItens = itens;
 
-            var carrinhoCompraViewModel = new CarrinhoCompraViewModel
+            var carrinhoCompraVM = new CarrinhoCompraViewModel
             {
-                CarinhoCompra = _carrinhoCompra,
+                CarrinhoCompra = _carrinhoCompra,
                 CarrinhoCompraTotal = _carrinhoCompra.GetCarrinhoCompraTotal()
             };
 
-            return View(carrinhoCompraViewModel);
+            return View(carrinhoCompraVM);
         }
         public RedirectToActionResult AdicionarItenNoCarrinho(int lancheId)
         {

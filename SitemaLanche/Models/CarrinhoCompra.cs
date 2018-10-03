@@ -18,7 +18,7 @@ namespace SitemaLanche.Models
             _context = contexto;
         }
         public string CarrinhoCompraId { get; set; }// tipo GUID
-        public List<CarrinhoCompraItem> CarrinhoCompraItems { get; set; }
+        public List<CarrinhoCompraItem> CarrinhoCompraItens { get; set; }
        
 
         public static CarrinhoCompra GetCarrinho(System.IServiceProvider service)
@@ -93,8 +93,8 @@ namespace SitemaLanche.Models
 
         public List<CarrinhoCompraItem> GetCarrinhoCompraItens()
         {
-            return CarrinhoCompraItems ??
-                   (CarrinhoCompraItems =
+            return CarrinhoCompraItens ??
+                   (CarrinhoCompraItens =
                        _context.CarrinhoCompraItens.Where(c => c.CarrinhoCompraId == CarrinhoCompraId)
                            .Include(s => s.Lanche)
                            .ToList());

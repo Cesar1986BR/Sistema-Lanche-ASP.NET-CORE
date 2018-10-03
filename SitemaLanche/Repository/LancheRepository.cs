@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace SitemaLanche.Repository
 {
 
-    public class LancheRepository : IlanchesRepository
+    public class LancheRepository : ILanchesRepository
     {
 
         private readonly AppDbContext _context;
