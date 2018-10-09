@@ -17,15 +17,15 @@ namespace SitemaLanche.Components
         }
         public IViewComponentResult Invoke()
         {
-           // var items = _carrinhoCompra.GetCarrinhoCompraItens();
+             var items = _carrinhoCompra.GetCarrinhoCompraItens();
             //para testar 
-            var items = new List<CarrinhoCompraItem>() { new CarrinhoCompraItem(), new CarrinhoCompraItem() };
+            //var items = new List<CarrinhoCompraItem>() { new CarrinhoCompraItem(), new CarrinhoCompraItem() };
             _carrinhoCompra.CarrinhoCompraItens = items;
 
             var carrinhoCompraVM = new CarrinhoCompraViewModel
             {
                CarrinhoCompra = _carrinhoCompra,
-               CarrinhoCompraTotal = _carrinhoCompra.GetCarrinhoCompraTotal()
+               CarrinhoCompraTotal = _carrinhoCompra.GetCarrinhoCompraTotal() //retorna total de itens no carrinho
             };
             return View(carrinhoCompraVM);
         }

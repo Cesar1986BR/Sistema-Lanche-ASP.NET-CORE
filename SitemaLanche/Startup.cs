@@ -73,6 +73,12 @@ namespace SitemaLanche
 
             app.UseMvc(routes =>
             {
+
+               routes.MapRoute(
+               name: "categoriaFiltro",
+               template: "Lanche/{action}/{categoria?}",
+               defaults: new { Controller = "Lanche", action = "List" });
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

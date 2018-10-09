@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SitemaLanche.Models;
 using SitemaLanche.Repository;
@@ -32,6 +33,8 @@ namespace SitemaLanche.Controllers
 
             return View(carrinhoCompraVM);
         }
+
+        [Authorize]
         public RedirectToActionResult AdicionarItenNoCarrinho(int lancheId)
         {
             var lancheSelecionado = _lancheRepository.Lanches.FirstOrDefault(p => p.lancheId == lancheId);
@@ -42,6 +45,8 @@ namespace SitemaLanche.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        [Authorize]
         public RedirectToActionResult RemoverItenNoCarrinho(int lancheId)
         {
             var lancheSelecionado = _lancheRepository.Lanches.FirstOrDefault(p => p.lancheId == lancheId);

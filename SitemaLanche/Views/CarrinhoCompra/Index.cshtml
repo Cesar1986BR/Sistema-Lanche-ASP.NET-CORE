@@ -1,5 +1,5 @@
 ﻿
-@model SitemaLanche.ViewModels.CarrinhoCompraViewModel
+@model CarrinhoCompraViewModel
 
 <div class="row checkoutForm">
     <h2>Seu carrinho de compras</h2>
@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model.CarinhoCompra.CarrinhoCompraItems)
+            @foreach (var item in Model.CarrinhoCompra.CarrinhoCompraItens)
             {
                 <tr>
                     <td class="text-center">@item.Quantidade</td>
@@ -24,7 +24,7 @@
                     <td class="text-right">
                         @((item.Quantidade * item.Lanche.Preco).ToString("c"))
                     </td>
-                    <td class="text-center"><a class="glyphicon glyphicon-remove text-danger remove" asp-controller="CarrinhoCompra" asp-action="RemoverItemDoCarrinhoCompra" asp-route-lancheId="@item.Lanche.lancheId"></a></td>
+                    <td class="text-center"><a class="glyphicon glyphicon-remove text-danger remove" asp-controller="CarrinhoCompra" asp-action="RemoverItenNoCarrinho" asp-route-lancheId="@item.Lanche.lancheId"></a></td>
                 </tr>
             }
         </tbody>
