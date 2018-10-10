@@ -36,7 +36,7 @@ namespace SitemaLanche
 
             services.AddTransient<ILanchesRepository, LancheRepository>(); 
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
-           // services.AddTransient<IPedidoRepository, PedidoRepository>();
+            services.AddTransient<IPedidoRepository, PedidoRepository>();
 
             //fornece uma instancia de HttpContextAcessor
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
