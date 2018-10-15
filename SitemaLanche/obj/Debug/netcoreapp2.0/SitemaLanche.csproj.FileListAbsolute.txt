@@ -3,9 +3,9 @@ C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\bin\Debug\netcoreapp2.0\SitemaLa
 C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\bin\Debug\netcoreapp2.0\SitemaLanche.runtimeconfig.dev.json
 C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\bin\Debug\netcoreapp2.0\SitemaLanche.dll
 C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\bin\Debug\netcoreapp2.0\SitemaLanche.pdb
+C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\obj\Debug\netcoreapp2.0\SitemaLanche.csprojAssemblyReference.cache
 C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\obj\Debug\netcoreapp2.0\SitemaLanche.csproj.CoreCompileInputs.cache
 C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\obj\Debug\netcoreapp2.0\SitemaLanche.AssemblyInfoInputs.cache
 C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\obj\Debug\netcoreapp2.0\SitemaLanche.AssemblyInfo.cs
 C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\obj\Debug\netcoreapp2.0\SitemaLanche.dll
 C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\obj\Debug\netcoreapp2.0\SitemaLanche.pdb
-C:\GIT\Sistema-Lanche-ASP.NET-CORE\SitemaLanche\obj\Debug\netcoreapp2.0\SitemaLanche.csprojAssemblyReference.cache
